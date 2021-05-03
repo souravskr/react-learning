@@ -1,11 +1,8 @@
-const incrementBtn = document.getElementById("increment-btn");
-let countDisplay = document.getElementById('display-count');
+const reactContentRoot = document.getElementById('root')
 
-let count = 0
+const createUnorderedList = React.createElement('ul', null, 
+[React.createElement('li', null, 'item1'), 
+React.createElement('li', null, 'item2')]
+)
 
-incrementBtn.addEventListener('click', () => {
-    count+=1
-    countDisplay.innerHTML = count
-})
-
-// console.log(count)
+ReactDOM.render(createUnorderedList, reactContentRoot)
